@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,useColorScheme } from 'react-native'
 import React from 'react'
 
-export default function components() {
+export default function components():JSX.Element {
+  const mode = useColorScheme() === 'dark'
   return (
     <View>
-      <Text style={styles.heading}>Cards</Text>
+      <Text style={mode?styles.heading:styles.headingd}>Cards</Text>
       <View style={styles.contain}>
       <View style={[styles.card,styles.cardone]}>
       <Text>Red</Text>
@@ -29,8 +30,18 @@ heading:{
   fontSize: 24,
   fontWeight: 'bold',
   padding: 8,
+  color:'#ffffff'
   
 },
+
+headingd:{
+  fontSize: 24,
+  fontWeight: 'bold',
+  padding: 8,
+  color:'#141414'
+  
+},
+
 contain:{
   padding: 5,
   flex: 1,

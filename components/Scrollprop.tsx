@@ -1,10 +1,11 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View,useColorScheme } from 'react-native'
 import React from 'react'
 
-export default function hs() {
+export default function hs():JSX.Element{
+  const mode = useColorScheme() === 'dark'
   return (
     <View>
-      <Text style={styles.heading}>Scrollable</Text>
+      <Text style={mode?styles.headingd:styles.heading}>Scrollable</Text>
       <ScrollView horizontal={true} style={styles.contain}>
         <View style={[styles.card,styles.eone]}>
           <Text>Tap</Text>
@@ -32,8 +33,17 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     padding: 8,
+    color:'#141414'
     
   },
+  headingd:{
+    fontSize: 24,
+    fontWeight: 'bold',
+    padding: 8,
+    color:'#ffffff'
+    
+  },
+
   card:{
     flex: 1,
     height:100,
