@@ -2,6 +2,8 @@ import React from "react";
 import { View,SafeAreaView, ScrollView, StyleSheet,useColorScheme } from 'react-native'
 import Cards from './components/Cards.tsx'
 import Scrollprop from './components/Scrollprop.tsx'
+import ImageCard from "./components/ImageCard.tsx"
+import Flash from "./components/Flash.tsx"
 
 
 function cssbuild():JSX.Element{
@@ -12,6 +14,8 @@ function cssbuild():JSX.Element{
 <ScrollView>
   <Cards/>
   <Scrollprop/>
+  <ImageCard/>
+    <Flash/>
 </ScrollView>
  </SafeAreaView>
     </View>
@@ -20,11 +24,10 @@ function cssbuild():JSX.Element{
 
 const styles = StyleSheet.create({
   boxx: {
-    flex:1,
+    
     backgroundColor: "#141414"
   },
   boxxw: {
-    flex:1,
     backgroundColor: "#faf9f6"
   }
 }
