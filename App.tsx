@@ -4,6 +4,8 @@ import Cards from './components/Cards.tsx'
 import Scrollprop from './components/Scrollprop.tsx'
 import ImageCard from "./components/ImageCard.tsx"
 import Flash from "./components/Flash.tsx"
+import ActionCard from "./components/ActionCard.tsx";
+import ContactList from "./components/ContactList.tsx";
 
 
 function cssbuild():JSX.Element{
@@ -16,6 +18,9 @@ function cssbuild():JSX.Element{
   <Scrollprop/>
   <ImageCard/>
     <Flash/>
+    <ContactList/>
+    <ActionCard/>
+    
 </ScrollView>
  </SafeAreaView>
     </View>

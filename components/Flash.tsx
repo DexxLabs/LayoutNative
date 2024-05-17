@@ -6,7 +6,7 @@ export default function ImageCard():JSX.Element {
     const mode = useColorScheme() === 'dark'
   return (
     <ScrollView>
-        <Text style={mode?styles.heading:styles.headingd}>DC Heroes</Text>
+        
         <View style={[styles.card,styles.elevated]}>
         <Image source={{uri:'https://images7.alphacoders.com/117/1173352.png'}}
       style={styles.imagecard}/>
